@@ -5,7 +5,7 @@
 require 'rubygems'
 
 gem 'activesupport', '~> 2.3'
-gem 'nokogiri',      '>= 1.4.4'
+gem 'nokogiri',      '>= 1.5.0'
 gem 'htmlentities',  '>= 4.0.0'
 
 
