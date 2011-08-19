@@ -140,8 +140,9 @@ class CraigScrape::Listings < CraigScrape::Scraper
 
       ret[:img_types] = img_type.split(' ').collect{|t| t.to_sym}
     end
-
-    ret[:section] = he_decode(section_anchor.inner_html).split("\302\240").join(" ") if section_anchor
+    ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')    
+    sp = ic.iconv("\302\240" + ' ')[0..-2]
+    ret[:section] = he_decode(section_anchor.inner_html).split(sp).join(" ") if section_anchor
 
     ret[:post_date] = date
     if SUMMARY_DATE.match he_decode(p_element.children[0])

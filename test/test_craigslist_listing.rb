@@ -113,8 +113,8 @@ class CraigslistListingTest < Test::Unit::TestCase
     assert_equal "Husqvarna Viking Rose Embroidery-Sewing Machine - $400", fortmyers_art_index600_060909.posts[0].label
     assert_equal "Punta Gorda, Charlotte County", fortmyers_art_index600_060909.posts[0].location
     assert_equal [], fortmyers_art_index600_060909.posts[0].pics
-    assert_equal [0, 0, 0, 28, 10, 2008, 2, 302, true, "EDT"], fortmyers_art_index600_060909.posts[0].post_date.to_a
-    assert_equal [0, 51, 21, 28, 10, 2008, 2, 302, true, "EDT"], fortmyers_art_index600_060909.posts[0].post_time.to_a
+    assert_equal [0, 0, 0, 28, 10, 2008, 2, 302, true, "PDT"], fortmyers_art_index600_060909.posts[0].post_date.to_a
+    assert_equal [0, 51, 21, 28, 10, 2008, 2, 302, true, "PDT"], fortmyers_art_index600_060909.posts[0].post_time.to_a
     assert_equal 897549505, fortmyers_art_index600_060909.posts[0].posting_id
     assert_equal 400.0, fortmyers_art_index600_060909.posts[0].price
     assert_equal nil, fortmyers_art_index600_060909.posts[0].reply_to

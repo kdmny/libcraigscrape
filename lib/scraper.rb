@@ -201,7 +201,11 @@ class CraigScrape::Scraper
   # Returns a string, of the current URI's source code
   def html_source
     @html_source ||= fetch_uri uri if uri
-    @html_source
+    if @html_source
+      ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
+      @html_source = ic.iconv(@html_source + ' ')[0..-2]
+    end
+    @html_source    
   end
 
   # Returns an Nokogiri parse, of the current URI

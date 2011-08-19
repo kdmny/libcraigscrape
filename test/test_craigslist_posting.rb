@@ -145,7 +145,7 @@ EOD
     assert_equal "NMB", posting0.location
     assert_equal 1131363612, posting0.posting_id
     assert_equal "sale-ktf9w-1131363612@craigslist.org", posting0.reply_to
-    assert_equal [0, 21, 13, 20, 4, 2009, 1, 110, true, "EDT"], posting0.post_time.to_a
+    assert_equal [0, 21, 13, 20, 4, 2009, 1, 110, true, "PDT"], posting0.post_time.to_a
     assert_equal [], posting0.pics
     assert_equal "Has storage for videos/dvds. About 2 ft high by 21/2 ft widw. Almond/light beige color",posting0.contents_as_plain
     assert_equal 35.0, posting0.price
@@ -337,8 +337,8 @@ EOD
     assert_equal "*****SOFTWARE****", posting_061710.label
     assert_equal "Dade/Broward", posting_061710.location
     assert_equal [], posting_061710.pics
-    assert_equal [0, 0, 0, 17, 6, 2010, 4, 168, true, "EDT"], posting_061710.post_date.to_a
-    assert_equal [0, 22, 13, 17, 6, 2010, 4, 168, true, "EDT"], posting_061710.post_time.to_a
+    assert_equal [0, 0, 0, 17, 6, 2010, 4, 168, true, "PDT"], posting_061710.post_date.to_a
+    assert_equal [0, 22, 13, 17, 6, 2010, 4, 168, true, "PDT"], posting_061710.post_time.to_a
     assert_equal 1796890756, posting_061710.posting_id
     assert_equal nil, posting_061710.price
     assert_equal nil, posting_061710.reply_to
