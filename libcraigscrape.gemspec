@@ -1,3 +1,6 @@
+require 'fileutils'
+require 'tempfile'
+
 include FileUtils
 
 NAME = "libcraigscrape"
