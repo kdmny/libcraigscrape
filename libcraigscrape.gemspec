@@ -1,10 +1,3 @@
-require 'rake'
-require 'rake/clean'
-require 'rake/gempackagetask'
-require 'rake/testtask'
-require 'fileutils'
-require 'tempfile'
-
 include FileUtils
 
 NAME = "libcraigscrape"
